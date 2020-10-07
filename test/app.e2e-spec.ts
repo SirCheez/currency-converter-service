@@ -15,10 +15,9 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  it('/currency (GET)', () => {
     return request(app.getHttpServer())
-      .get('/')
+      .get('/currency/convert')
       .expect(200)
-      .expect('Hello World!');
   });
 });
